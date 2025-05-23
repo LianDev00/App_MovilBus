@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical">
+
+    <!-- Círculo naranja con letra -->
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:backgroundTint="#FFA500"
+        android:fontFamily="sans-serif-medium"
+        android:shape="oval"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <!-- Nombre del archivo -->
+    <TextView
+        android:id="@+id/tvArchivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List item"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Checkbox -->
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18sp"
+        android:layout_marginLeft="16dp" />
+
+</LinearLayout>

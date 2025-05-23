@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Blank fragment, no additional content here -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fin_ruta"
+            android:paddingTop="16dp" />
+        <!-- Campo Origen o Destino (ComboBox) -->
+        <Spinner
+            android:id="@+id/spinnerOrigenDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/edtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fecha"
+            android:text=""
+            android:inputType="date"
+            android:focusable="true"
+            android:clickable="true"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/campo_de_fecha"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="ContentDescription" />
+
+        <!-- Campo Hora (con hora del sistema) -->
+
+        <EditText
+            android:id="@+id/edtHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hora"
+            android:text=""
+            android:inputType="time"
+            android:focusable="false"
+            android:clickable="true"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/campo_de_hora"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <!-- Campo Placa del Vehículo -->
+        <EditText
+            android:id="@+id/edtPlaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/placa_del_veh_culo"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/campo_de_placa_del_veh_culo" />
+
+        <!-- Campo Conductor -->
+        <EditText
+            android:id="@+id/edtConductor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/conductor"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/campo_de_conductor" />
+
+        <!-- Campo Código de Ruta -->
+        <EditText
+            android:id="@+id/edtCodigoRuta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/c_digo_de_ruta"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/campo_de_c_digo_de_ruta" />
+
+        <!-- Botón Registrar -->
+        <Button
+            android:id="@+id/btnRegistrarFinRuta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registrar"
+            android:backgroundTint="#FFA500"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/bot_n_registrar" />
+
+    </LinearLayout>
+
+</FrameLayout>
