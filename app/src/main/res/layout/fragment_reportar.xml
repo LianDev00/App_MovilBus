@@ -1,13 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- RecyclerView -->
+    <LinearLayout
+        android:id="@+id/linearLayoutBuscador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/inputBuscartareapordni"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittext_rounded_border"
+            android:hint="Dni Conductor"
+            android:inputType="text"
+            android:maxLength="8"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#3D3D3D"
+            android:textColorHint="#933100" />
+
+        <ImageButton
+            android:id="@+id/imageBuscartarea"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:src="@drawable/filter"
+            android:paddingLeft="5dp" />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTareas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"/>
+        android:layout_height="200dp"
+        android:layout_below="@id/linearLayoutBuscador" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerViewTareas"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id Tarea"
+            android:textColor="#3D3D3D"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/inputDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded_border"
+            android:hint="Value"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textColor="#3D3D3D"
+            android:textColorHint="#933100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Fecha Entrega"
+            android:textColor="#3D3D3D"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/inputFechaEntrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittext_rounded_border"
+            android:hint="Value"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textColor="#3D3D3D"
+            android:textColorHint="#933100"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Estado"
+            android:textColor="#3D3D3D"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/txtEstadoRepor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittext_rounded_border"
+            android:hint="Value"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textColor="#3D3D3D"
+            android:textColorHint="#933100"
+            android:maxLength="7"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizarTarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="Actualizar Tarea"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

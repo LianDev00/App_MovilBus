@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menuPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:background="#ffffff"
+    android:padding="16dp"
+    tools:context=".MenuPrincipal">
+
+    <!-- Título MovilBus -->
+    <TextView
+        android:id="@+id/titleMovilBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="MovilBus"
+        android:textColor="#8F8884"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bienvenida -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Bienvenido Usuario"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleMovilBus" />
+
+    <!-- Cuadrícula de botones -->
+    <!-- Botón 1 -->
+
+    <LinearLayout
+        android:id="@+id/btnMarcarRuta"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btnTareas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintWidth_percent="0.45">
+
+        <ImageView
+            android:id="@+id/imageBtnMarcaruta"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/marcar_ruta"
+            android:src="@drawable/ruta"
+            app:tint="#FF6F26" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/marcar_ruta"
+            android:textAlignment="center"
+            android:textColor="#3D3D3D" />
+    </LinearLayout>
+
+    <!-- Botón 2 -->
+    <LinearLayout
+        android:id="@+id/btnTareas"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnMarcarRuta"
+        app:layout_constraintTop_toTopOf="@id/btnMarcarRuta"
+        app:layout_constraintWidth_percent="0.45">
+
+        <ImageView
+            android:id="@+id/imageBtnTareas"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/tareas"
+            android:src="@drawable/tarea"
+            app:tint="#FF6F26" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tareas"
+            android:textAlignment="center"
+            android:textColor="#3D3D3D" />
+    </LinearLayout>
+
+    <!-- Botón 3 -->
+    <LinearLayout
+        android:id="@+id/btnAnuncios"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btnArchivos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMarcarRuta"
+        app:layout_constraintWidth_percent="0.45">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/anuncios"
+            android:src="@drawable/anuncio"
+            app:tint="#FF6F26" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anuncios"
+            android:textAlignment="center"
+            android:textColor="#3D3D3D" />
+    </LinearLayout>
+
+    <!-- Botón 4 -->
+    <LinearLayout
+        android:id="@+id/btnArchivos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAnuncios"
+        app:layout_constraintTop_toTopOf="@id/btnAnuncios"
+        app:layout_constraintWidth_percent="0.45">
+
+        <ImageView
+            android:id="@+id/imageBtnArchivos"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/archivos"
+            android:src="@drawable/archivos"
+            app:tint="#FF6F26" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/archivos"
+            android:textAlignment="center"
+            android:textColor="#3D3D3D" />
+    </LinearLayout>
+
+    <!-- Botón 5 -->
+    <LinearLayout
+        android:id="@+id/btnMantenimiento"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/btnother"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAnuncios"
+        app:layout_constraintWidth_percent="0.45">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/mantenimiento"
+            android:src="@drawable/image_mantener"
+            app:tint="#FF6F26" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mantenimiento"
+            android:textAlignment="center"
+            android:textColor="#3D3D3D" />
+    </LinearLayout>
+
+    <!-- Botón 6 -->
+    <LinearLayout
+        android:id="@+id/btnother"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnMantenimiento"
+        app:layout_constraintTop_toTopOf="@id/btnMantenimiento"
+        app:layout_constraintWidth_percent="0.45">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/other"
+            android:src="@drawable/image_mantener"
+            app:tint="#FF6F26" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other"
+            android:textAlignment="center"
+            android:textColor="#3D3D3D" />
+    </LinearLayout>
+
+    <!-- Cerrar sesión -->
+    <TextView
+        android:id="@+id/logoutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/cerrar_sesi_n"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

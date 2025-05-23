@@ -3,80 +3,176 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EAEAEA"
     tools:context=".RegistrarFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:gravity="center">
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/txtTipoTarea"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo Tarea"
-            android:paddingTop="16dp" />
-        <!-- Campo Origen o Destino (ComboBox) -->
-        <Spinner
-            android:id="@+id/spinnerTipoTarea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <EditText
-            android:id="@+id/edtPlaca"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/placa_del_veh_culo"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:importantForAccessibility="yes"
-            android:contentDescription="@string/campo_de_placa_del_veh_culo" />
+            <TextView
+                android:id="@+id/tipotarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo Tarea"
+                android:textColor="#3D3D3D"
+                android:textSize="14sp" />
 
-        <!-- Campo Conductor -->
-        <EditText
-            android:id="@+id/edtConductor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/conductor"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:importantForAccessibility="yes"
-            android:contentDescription="@string/campo_de_conductor" />
-        <EditText
-            android:id="@+id/edtFechaLimite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Fecha Limite"
-            android:text=""
-            android:inputType="date"
-            android:focusable="true"
-            android:clickable="true"
-            android:importantForAccessibility="yes"
-            android:contentDescription="@string/campo_de_fecha"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            tools:ignore="ContentDescription" />
+            <Spinner
+                android:id="@+id/spinnerTipoTarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="#3D3D3D"
+                android:textColorHint="#933100" />
 
-        <!-- Botón Registrar -->
-        <Button
-            android:id="@+id/btnRegistrarTarea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/registrar"
-            android:backgroundTint="#FFA500"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:padding="12dp"
-            android:importantForAccessibility="yes"
-            android:contentDescription="RegistrarTarea" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Detalle de la tarea"
+                android:textColor="#3D3D3D"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/inputDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:hint="Value"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="#3D3D3D"
+                android:textColorHint="#933100" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Placa del vehiculo"
+                android:textColor="#3D3D3D"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/inputPlacavehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:hint="Value"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:maxLength="7"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="#3D3D3D"
+                android:textColorHint="#933100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Dni Conductor"
+                android:textColor="#3D3D3D"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/inputdniconductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:hint="Value"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:maxLength="8"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="#3D3D3D"
+                android:textColorHint="#933100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fecha Registro"
+                android:textColor="#3D3D3D"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/inputFecharegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:hint="Value"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="#3D3D3D"
+                android:textColorHint="#933100"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fecha Limite"
+                android:textColor="#3D3D3D"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/inputFecharelimite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:hint="Value"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="#3D3D3D"
+                android:textColorHint="#933100"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrarTarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:onClick="RegistrarTarea"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:text="Registrar Tarea"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

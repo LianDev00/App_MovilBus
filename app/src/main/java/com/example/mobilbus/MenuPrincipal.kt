@@ -21,6 +21,7 @@ class MenuPrincipal : AppCompatActivity() {
         val imageBtnMarcaruta: ImageView = findViewById(R.id.imageBtnMarcaruta)
         val imageBtnTareas: ImageView = findViewById(R.id.imageBtnTareas)
         val imageBtnArchivos: ImageView = findViewById(R.id.imageBtnArchivos)
+        val imageBtnMantenimiento: ImageView = findViewById(R.id.imageBtnMantenimiento)
 
         // Ejemplo: actualizar nombre del usuario
         val userName = "usernnn"
@@ -33,20 +34,22 @@ class MenuPrincipal : AppCompatActivity() {
         }
         // Configura el listener de clic
         imageBtnMarcaruta.setOnClickListener {
-            // Cuando la imagen se haga clic, se abre otro Activity
             val intent = Intent(this, MarcarRutaActivity::class.java)
             startActivity(intent)
         }
 
         imageBtnTareas.setOnClickListener {
-            // Cuando la imagen se haga clic, se abre otro Activity
             val intent = Intent(this, TareasActivity::class.java)
             startActivity(intent)
         }
 
         imageBtnArchivos.setOnClickListener {
-            // Cuando la imagen se haga clic, se abre otro Activity
             val intent = Intent(this, ArchivosActivity::class.java)
+            startActivity(intent)
+        }
+
+        imageBtnMantenimiento.setOnClickListener {
+            val intent = Intent(this, MantenimientoActivity::class.java)
             startActivity(intent)
         }
 

@@ -5,195 +5,61 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
-    android:background="#ffffff"
     tools:context=".TareasActivity">
 
-    <TextView
-        android:id="@+id/titleMarcarRuta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="Tareas"
-        android:textColor="#333333"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="24dp"
-        app:tabMode="fixed"
-        app:tabGravity="fill"
-        app:tabIndicatorHeight="0dp"
-        app:tabBackground="@drawable/tab_background_selector"
-        app:tabTextColor="#FF6F26"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabRippleColor="@null"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleMarcarRuta"
-        android:contentDescription="@string/navegaci_n_entre_pesta_as_de_inicio_y_fin"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/mainCardView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="24dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ScrollView
+        <TextView
+            android:id="@+id/titleMarcarRuta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Tareas"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TabLayout  inicio-fin -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/navegaci_n_entre_pesta_as_de_inicio_y_fin"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/holo_orange_dark"
+            app:tabMode="fixed" />
+
+        <!-- ViewPager2 for swiping between fragments -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:layout_below="@id/tabLayout" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tipo de Tarea"
-                    android:textColor="#3D3D3D"
-                    android:textSize="14sp" />
-                <EditText
-                    android:id="@+id/inputTipoTarea"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/edittext_rounded_border"
-                    android:hint="Value"
-                    android:inputType="text"
-                    android:minHeight="48dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp"
-                    android:textColor="#3D3D3D"
-                    android:textColorHint="#933100" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Placa del Vehiculo"
-                    android:textColor="#3D3D3D"
-                    android:textSize="14sp" />
-                <EditText
-                    android:id="@+id/inputPlacaVehiculo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/edittext_rounded_border"
-                    android:hint="Value"
-                    android:inputType="date"
-                    android:minHeight="48dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp"
-                    android:textColor="#3D3D3D"
-                    android:textColorHint="#933100" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Conductor"
-                    android:textColor="#3D3D3D"
-                    android:textSize="14sp" />
-                <EditText
-                    android:id="@+id/inputConductor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/edittext_rounded_border"
-                    android:hint="Value"
-                    android:inputType="time"
-                    android:minHeight="48dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp"
-                    android:textColor="#3D3D3D"
-                    android:textColorHint="#933100" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Fecha Limite"
-                    android:textColor="#3D3D3D"
-                    android:textSize="14sp" />
-                <EditText
-                    android:id="@+id/inputFechaLimite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/edittext_rounded_border"
-                    android:hint="Value"
-                    android:inputType="textCapCharacters"
-                    android:minHeight="48dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="12dp"
-                    android:paddingBottom="12dp"
-                    android:textColor="#3D3D3D"
-                    android:textColorHint="#933100" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnRegistrar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="32dp"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="Registrar"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp"
-                    app:backgroundTint="#FF6F26"
-                    app:cornerRadius="8dp" />
-
-                <Button
-                    android:id="@+id/btnListaTareas"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Lista de Tareas"
-                    android:background="@drawable/button_stroke_orange"
-                    android:textColor="#FF6F26"
-                    android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginHorizontal="0dp" android:visibility="gone"  />
-
-            </LinearLayout>
-        </ScrollView>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

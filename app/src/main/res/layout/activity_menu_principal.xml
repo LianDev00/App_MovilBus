@@ -180,6 +180,7 @@
         app:layout_constraintWidth_percent="0.45">
 
         <ImageView
+            android:id="@+id/imageBtnMantenimiento"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:contentDescription="@string/mantenimiento"

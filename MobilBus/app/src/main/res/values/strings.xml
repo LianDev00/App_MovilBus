@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MobilBus</string>
+    <string name="LoginUsuario">Usuario</string>
+    <string name="LoginContra">Contraseña</string>
+    <string name="LoginIngresar">Ingresar</string>
+    <string name="contactar_con_el_administrador">Contactar con el administrador</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="bienvenido_usernnn">Bienvenido usernnn</string>
+    <string name="marcar_ruta">Marcar ruta</string>
+    <string name="tareas">TAREAS</string>
+    <string name="anuncios">Anuncios</string>
+    <string name="archivos">Archivos</string>
+    <string name="other">other</string>
+    <string name="mantenimiento">Mantenimiento</string>
+    <string name="marcar_ruta2">MARCAR RUTA</string>
+    <string name="origen_o_destino">Origen o destino</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navegaci_n_entre_pesta_as_de_inicio_y_fin">Navegación entre pestañas de inicio y fin</string>
+    <string name="origen">Origen</string>
+    <string name="fecha">Fecha</string>
+    <string name="campo_de_fecha">Campo de Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="campo_de_hora">Campo de Hora</string>
+    <string name="placa_del_veh_culo">Placa del Vehículo</string>
+    <string name="campo_de_placa_del_veh_culo">Campo de Placa del Vehículo</string>
+    <string name="conductor">Conductor</string>
+    <string name="campo_de_conductor">Campo de Conductor</string>
+    <string name="c_digo_de_ruta">Código de Ruta</string>
+    <string name="campo_de_c_digo_de_ruta">Campo de Código de Ruta</string>
+    <string name="registrar">Registrar</string>
+    <string name="bot_n_registrar">Botón Registrar</string>
+    <string name="fin_ruta">Fin ruta</string>
+    <string name="tarea">Tarea</string>
+</resources>
