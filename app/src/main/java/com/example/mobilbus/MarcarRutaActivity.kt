@@ -29,13 +29,11 @@ class MarcarRutaActivity : androidx.appcompat.app.AppCompatActivity() {
                     0 -> {
                         Toast.makeText(this@MarcarRutaActivity, "Pestaña Inicio seleccionada", Toast.LENGTH_SHORT).show()
                         inputOrigenDestino.hint = "Origen"
-
                     }
                     1 -> {
 
                         Toast.makeText(this@MarcarRutaActivity, "Pestaña Fin seleccionada", Toast.LENGTH_SHORT).show()
                         inputOrigenDestino.hint = "Destino"
-
                     }
                 }
             }
